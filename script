@@ -1,0 +1,62 @@
+function date() {
+  year = prompt("Enter your year please:");
+  month = prompt("Enter your month please:");
+  day = prompt("Enter your day please:");
+
+  year = +year + 56;
+  month = +month + 8;
+  if (month > 12) {
+    year = year + 1;
+    month1 = month - 12;
+  } else {
+    month1 = month;
+  }
+  if (month - 8 == 1) {
+    day = +day + 16;
+  }
+  if (month - 8 == 2) {
+    day = +day + 17;
+  }
+  if (month - 8 == 3) {
+    day = +day + 16;
+  }
+  if (month - 8 == 4) {
+    day = +day + 17;
+  }
+  if (month - 8 == 5) {
+    day = +day + 17;
+  }
+  if (month - 8 == 6) {
+    day = +day + 17;
+  }
+  if (month - 8 == 7) {
+    day = +day + 16;
+  }
+  if (month - 8 == 8) {
+    day = +day + 15;
+  }
+  if (month - 8 == 9) {
+    day = +day + 15;
+  }
+  if (month - 8 == 10) {
+    day = +day + 13;
+  }
+  if (month - 8 == 11) {
+    day = +day + 14;
+  }
+  if (month - 8 == 11) {
+    day = +day + 13;
+  }
+
+  if (day > 31) {
+    day = +day - 31;
+    month1 = month1 + 1;
+  }
+  document.write(
+    JSON.stringify(year) +
+      "  " +
+      JSON.stringify(month1) +
+      "   " +
+      JSON.stringify(day)
+  );
+}
